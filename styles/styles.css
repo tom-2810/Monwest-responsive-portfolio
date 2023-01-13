@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --medium-size: 2rem;
+    --large-size: 4rem;
+}
+
+body {
+    padding: 0 var(--medium-size);
+    margin-top: var(--medium-size);
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+}
+
+.me ul {
+    display: flex;
+    list-style: none;
+    gap: var(--large-size);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .profile-pic {
+    position: relative;
+}
+
+.profile .profile-pic p {
+    position: absolute;
+    left: -2.5rem;
+    bottom: -.5rem;
+    font-size: 3rem;
+    transform-origin: bottom;
+    animation: wave 1s infinite;
+}
+
+.photo {
+    border-radius: 50%;
+}
+
+.fullname {
+    width: 5rem;
+    font-size: var(--medium-size);
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium-size);
+}
+
+.introduction .short-bio {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium-size);
+}
+
+.introduction h2 {
+    font-weight: 600;
+    font-size: var(--large-size);
+    width: 15rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+.action-buttons .primary {
+    border: 1.5px solid #342C33;
+    box-shadow: 0px 3px 0px #342C33;
+    border-radius: 15px;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+
+    }
+}
