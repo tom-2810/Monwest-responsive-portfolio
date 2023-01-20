@@ -1,5 +1,8 @@
 @import url(../assets/fonts/Manrope/static/Manrope-Medium.ttf);
 
+@import url(../assets/fonts/Manrope/static/Manrope-Regular.ttf);
+
+
 @font-face {
     font-family: "Manrope Medium";
     font-style: normal;
@@ -17,7 +20,8 @@
     margin: 0;
     padding: 0;
     color: var(--c-default-text);
-    font-family: Manrope Regular;
+    font-family: Manrope Medium;
+    /* font-weight: 600; */
 }
 
 :root {
@@ -26,7 +30,7 @@
     --medium-radius: 35px;
     --medium-size: 1.5rem;
     --large-size: 2rem;
-    --larger-size: 4rem;
+    --larger-size: 3.5rem;
 
     --c-default-text: #342C33;
     --c-text-gradient: linear-gradient(93.17deg, #F389BA 3.05%, #4DC9FF 80.27%);
@@ -41,7 +45,8 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
     padding: 0 var(--medium-size);
 }
 
@@ -52,8 +57,7 @@ h1, h3 {
 }
 
 h2 {
-    font-size: var(--larger-size);
-    /* font-weight: 600; */
+    font-family: Manrope Regular;
     line-height: 100%;
     letter-spacing: -0.02em;
 }
@@ -68,6 +72,7 @@ p {
 }
 
 .accent {
+    font-family: Manrope Regular;
     background: var(--c-text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,6 +148,7 @@ p {
 } */
 
 .headline {
+    font-size: var(--larger-size);
     width: 15rem;
     grid-row: 2 / 3;
 }
@@ -156,7 +162,7 @@ p {
 
 .featured {
     width: 100%;
-    height: 24rem;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
     border-radius: var(--medium-radius);
 }
@@ -242,6 +248,8 @@ p {
     }
 
     .headline {
+        font-size: 4.5rem;
+        width: 17rem;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
