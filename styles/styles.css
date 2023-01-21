@@ -159,13 +159,52 @@ p {
     gap: var(--medium-size);
     grid-row: 3 / 4;
 }
-
-.featured {
-    width: 100%;
+/* .project-container {
+    position: relative;
+    width: 100px;
     aspect-ratio: 5 / 4;
-    object-fit: cover;
+}
+
+.project {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     border-radius: var(--medium-radius);
 }
+
+.featured {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+} */
+
+.project-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+  
+  .project {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    clip-path: inset(0% 0 0% 0% round 10px);
+    /* border: 2px solid blue; */
+  }
+  
+  .featured {
+    position: fixed;
+    top: 0;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 2px solid black; */
+  }
 
 #welcome h3 {}
 
@@ -208,6 +247,53 @@ p {
 
 .action-buttons .secondary:hover::after {
     animation: point .7s infinite alternate;
+}
+
+.fullscreen {
+    position: fixed;
+    /* display: none; */
+    height: 100vh;
+    width: 100vw;
+    background: red;
+    clip-path: circle(0rem at 450px 500px);
+    /* transition: 1s; */
+}
+
+.fullscreen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.open {
+    display: block;
+    animation: fill 1s forwards;
+}
+
+.close {
+    animation: fill-reverse 1s forwards;
+}
+
+.closed {
+    clip-path: circle(0rem at inherit inherit);
+}
+
+@keyframes fill-reverse {
+    from {
+        clip-path: circle(100%);
+    }
+    to {
+        clip-path: circle(0rem at inherit inherit);
+    }
+}
+
+@keyframes fill {
+    from {
+    clip-path: circle(0rem at inherit inherit);
+    }
+    to {
+        clip-path: circle(100%);
+    }
 }
 
 @keyframes point {
