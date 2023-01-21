@@ -27,7 +27,10 @@
 :root {
     --default-width: 85vw;
     --max-width: 75rem;
+
     --medium-radius: 35px;
+    --small-radius: 15px;
+
     --medium-size: 1.5rem;
     --large-size: 2rem;
     --larger-size: 3.5rem;
@@ -40,6 +43,8 @@
     --c-light-pink: #FFF0F7;
     --c-blue: #98DFFE;
 
+    --border: 1.5px solid #342C33;
+    --box-shadow: 0px 3px 0px #342C33;
 }
 
 body {
@@ -48,9 +53,11 @@ body {
     /* justify-content: center; */
     align-items: center;
     padding: 0 var(--medium-size);
+    height: 400vh;
 }
 
-h1, h3 {
+h1,
+h3 {
     font-size: var(--medium-size);
     /* font-weight: 500; */
     line-height: 110%;
@@ -69,6 +76,11 @@ h3 {
 
 p {
     line-height: 145%;
+}
+
+.noscroll {
+    /* height: 100%; */
+    overflow: hidden;
 }
 
 .accent {
@@ -159,6 +171,7 @@ p {
     gap: var(--medium-size);
     grid-row: 3 / 4;
 }
+
 /* .project-container {
     position: relative;
     width: 100px;
@@ -185,26 +198,50 @@ p {
     position: relative;
     width: 100%;
     aspect-ratio: 3/2;
-  }
-  
-  .project {
+}
+
+.project {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background-color: yellow; */
-    clip-path: inset(0% 0 0% 0% round 10px);
-    /* border: 2px solid blue; */
-  }
-  
-  .featured {
+    clip-path: inset(0% 0 0% 0% round var(--medium-radius));
+}
+
+.featured {
     position: fixed;
     top: 0;
-    left:0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* border: 2px solid black; */
-  }
+}
+
+.data {
+    position: absolute;
+    display: flex;
+    gap: var(--medium-size);
+    width: 100%;
+    justify-content: space-between;
+    padding: var(--medium-size);
+    z-index: 1;
+}
+
+.data > * {
+    padding: .7rem 1rem;
+    background-color: white;
+    color: var(--c-default-text);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--small-radius);
+}
+
+.data .link {
+    margin-left: auto;
+}
+
+.project .data {
+    pointer-events: none;
+}
 
 #welcome h3 {}
 
@@ -219,9 +256,9 @@ p {
 }
 
 .action-buttons .primary {
-    border: 1.5px solid #342C33;
-    box-shadow: 0px 3px 0px #342C33;
-    border-radius: 15px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--small-radius);
 }
 
 .action-buttons .secondary {
@@ -249,7 +286,7 @@ p {
     animation: point .7s infinite alternate;
 }
 
-.fullscreen {
+.fullscreen.featured {
     position: fixed;
     /* display: none; */
     height: 100vh;
@@ -259,7 +296,7 @@ p {
     /* transition: 1s; */
 }
 
-.fullscreen img {
+.fullscreen.featured img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -271,7 +308,7 @@ p {
 }
 
 .close {
-    animation: fill-reverse 1s forwards;
+    animation: fill-reverse .4s forwards;
 }
 
 .closed {
@@ -282,6 +319,7 @@ p {
     from {
         clip-path: circle(100%);
     }
+
     to {
         clip-path: circle(0rem at inherit inherit);
     }
@@ -289,8 +327,9 @@ p {
 
 @keyframes fill {
     from {
-    clip-path: circle(0rem at inherit inherit);
+        clip-path: circle(0rem at inherit inherit);
     }
+
     to {
         clip-path: circle(100%);
     }
