@@ -242,7 +242,7 @@ p {
 }
 
 .project:hover {
-    clip-path: inset(-1% -1% -1% -1% round 10%);
+    /* clip-path: inset(-1% -1% -1% -1% round 10%); */
 }
 
 /* TODO algemene verwijzing */
@@ -251,12 +251,13 @@ p {
 .feminina,
 .anti-pop,
 .heritage-museum {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 1s;
 }
 
 .data {
@@ -328,14 +329,21 @@ p {
     animation: point .7s infinite alternate;
 }
 
-.fullscreen {
+#fullscreens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    /* display: none; */
-    height: 100vh;
     width: 100vw;
-    background: red;
-    clip-path: circle(0rem at 450px 500px);
-    /* transition: 1s; */
+    /* height: 100vh; */
+}
+
+.fullscreen {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 1s, visibility 0s;
 }
 
 .fullscreen img {
@@ -362,6 +370,20 @@ p {
 }
 
 .open {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes open {
+    from {
+        
+    }
+}
+
+/* .open {
     display: block;
     animation: fill 1s forwards;
 }
@@ -372,7 +394,7 @@ p {
 
 .closed {
     clip-path: circle(0rem at inherit inherit);
-}
+} */
 
 @keyframes fill-reverse {
     from {
@@ -505,7 +527,7 @@ p {
         justify-content: center;
         max-width: 40rem;
     }
-    
+
     #tech-stack p {
         grid-row: 2 / 3;
         grid-column: 1 / 2;
