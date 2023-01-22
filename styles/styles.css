@@ -26,7 +26,7 @@
 
 :root {
     --default-width: 85vw;
-    --max-width: 95rem;
+    --max-width: 85rem;
 
     --medium-radius: 35px;
     --small-radius: 15px;
@@ -53,6 +53,7 @@ body {
     /* justify-content: center; */
     align-items: center;
     padding: 0 var(--medium-size);
+    gap: var(--larger-size);
     height: 400vh;
 }
 
@@ -218,11 +219,15 @@ p {
 }
 
 .project:hover {
-    clip-path: inset(-2% -2% -2% -2% round 15%);
+    clip-path: inset(-1% -1% -1% -1% round 10%);
 }
 
 /* TODO algemene verwijzing */
-.featured, .testproject {
+.featured,
+.artefacts,
+.feminina,
+.anti-pop,
+.heritage-museum {
     position: fixed;
     top: 0;
     left: 0px;
@@ -234,14 +239,14 @@ p {
 .data {
     position: absolute;
     display: flex;
-    gap: var(--medium-size);
+    gap: .5rem;
     width: 100%;
     justify-content: space-between;
     padding: var(--medium-size);
     z-index: 1;
 }
 
-.data > * {
+.data>* {
     padding: .7rem 1rem;
     background-color: white;
     color: var(--c-default-text);
@@ -262,7 +267,7 @@ p {
 
 .action-buttons {
     display: flex;
-    gap: .5rem;
+    gap: var(--medium-size);
 }
 
 .action-buttons a {
@@ -278,6 +283,7 @@ p {
 
 .action-buttons .secondary {
     position: relative;
+    padding-left: 0;
 }
 
 .action-buttons .secondary::before {
@@ -379,6 +385,56 @@ p {
     #welcome {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 4vw;
+    }
+
+    #projects {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        column-gap: 20px;
+    }
+
+    #project-container {
+        aspect-ratio: initial;
+    }
+
+    #projects #artefacts {
+        grid-column: 1 / 6;
+        grid-row: 1 / 4;
+    }
+
+    #projects #feminina {
+        grid-column: 7 / 12;
+        grid-row: 2 / 5;
+    }
+
+    #projects #featured {
+        grid-column: 2 / 9;
+        grid-row: 6 / 10;
+    }
+
+    #projects #lets-talk {
+        grid-column: 10 / 13;
+        grid-row: 7 / 9;
+    }
+
+    #projects #anti-pop {
+        grid-column: 2 / 7;
+        grid-row: 12 / 15;
+    }
+
+    #projects #heritage-museum {
+        grid-column: 8 / 13;
+        grid-row: 11 / 14;
+    }
+
+    #projects #load-more {
+        grid-column: 2 / 4;
+        grid-row: 15 / 16;
+        height: fit-content;
+    }
+
+    hr {
+        grid-column: span 2;
     }
 
     .me {
