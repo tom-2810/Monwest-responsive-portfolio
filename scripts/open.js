@@ -6,9 +6,6 @@ let featuredFullscreen = document.querySelector(".fullscreen.featured");
 featuredContainer.addEventListener("click", () => {
     document.body.classList.toggle("noscroll");
 
-    let featuredContainerWidth = featuredContainer.clientWidth;
-    let featuredContainerHeight = featuredContainer.clientHeight;
-
     let featuredContainerX = featuredContainer.getBoundingClientRect().left;
     let featuredContainerY = featuredContainer.getBoundingClientRect().top;
 
@@ -21,7 +18,7 @@ featuredContainer.addEventListener("click", () => {
         if(featuredFullscreen.classList.contains("open")) {
             featuredFullscreen.style.transform = null;
         } else {
-            featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(${-1*featuredContainerY}px)`;
+            featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(${-1*featuredContainerY - 1}px)`;
             console.log(featuredContainerY)
         }
     }
@@ -29,7 +26,7 @@ featuredContainer.addEventListener("click", () => {
     if(featuredFullscreen.classList.contains("open")) {
         featuredFullscreen.style.transform = null;
     } else {
-        featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(-${featuredContainerY}px)`;
+        featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(-${featuredContainerY + 1}px)`;
     }
 
         

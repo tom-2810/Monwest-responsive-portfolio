@@ -21,7 +21,6 @@
     padding: 0;
     color: var(--c-default-text);
     font-family: Manrope Medium;
-    /* font-weight: 600; */
 }
 
 :root {
@@ -50,17 +49,14 @@
 body {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 0 var(--medium-size);
     gap: var(--larger-size);
-    /* height: 400vh; */
 }
 
 h1,
 h3 {
     font-size: var(--medium-size);
-    /* font-weight: 500; */
     line-height: 110%;
 }
 
@@ -71,7 +67,6 @@ h2 {
 }
 
 h3 {
-    /* font-weight: 600; */
     font-size: var(--large-size);
 }
 
@@ -79,8 +74,11 @@ p {
     line-height: 145%;
 }
 
+button {
+    all: unset;
+}
+
 .noscroll {
-    /* height: 100%; */
     overflow: hidden;
 }
 
@@ -160,30 +158,6 @@ p {
     width: 5rem;
 }
 
-/* .introduction {
-    display: flex;
-    flex-direction: column;
-    gap: var(--medium-size);
-}
-
-.introduction .short-bio {
-    display: flex;
-    flex-direction: column;
-    gap: var(--medium-size);
-}
-
-.introduction h2 {
-    font-weight: 600;
-    font-size: var(--large-size);
-    width: 15rem;
-} */
-
-/* .headline {
-    font-size: var(--larger-size);
-    width: 15rem;
-    grid-row: 2 / 3;
-} */
-
 .headline {
     font-size: var(--larger-size);
     width: 15rem;
@@ -205,52 +179,24 @@ p {
     grid-row: 3 / 4;
 }
 
-/* .project-container {
-    position: relative;
-    width: 100px;
-    aspect-ratio: 5 / 4;
-}
-
-.project {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--medium-radius);
-}
-
-.featured {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-} */
-
 .project-container {
     position: relative;
     width: 100%;
     aspect-ratio: 5/4;
 }
 
-.project {
+.project-container .project {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     clip-path: inset(0% 0 0% 0% round var(--medium-radius));
     transition: 1s;
 }
 
-.project:hover {
-    /* clip-path: inset(-1% -1% -1% -1% round 10%); */
-}
-
 /* TODO algemene verwijzing */
-.featured,
-.artefacts,
-.feminina,
-.anti-pop,
-.heritage-museum {
+.featured {
     position: relative;
     top: 0;
     left: 0px;
@@ -329,21 +275,13 @@ p {
     animation: point .7s infinite alternate;
 }
 
-#fullscreens {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100vw;
-    /* height: 100vh; */
-}
-
 .fullscreen {
     visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
     transition: all 1s, visibility 0s;
+    z-index: 1;
 }
 
 .fullscreen img {
@@ -367,6 +305,18 @@ p {
 
 #tech-stack p {
     grid-row: 3 / 4;
+}
+
+#projects .project {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5/4;
+    overflow: hidden;
+}
+
+#projects .project img {
+    position: absolute;
+    height: 100%;
 }
 
 .open {
