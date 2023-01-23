@@ -22,6 +22,7 @@
     color: var(--c-default-text);
     font-family: Manrope Medium;
     scroll-behavior: smooth;
+    scroll-margin: var(--largest-size);
 }
 
 :root {
@@ -33,7 +34,8 @@
 
     --medium-size: 1.5rem;
     --large-size: 2rem;
-    --larger-size: 3.5rem;
+    --larger-size: 4rem;
+    --largest-size: 7rem;
 
     --c-default-text: #342C33;
     --c-text-gradient: linear-gradient(93.17deg, #F389BA 3.05%, #4DC9FF 80.27%);
@@ -47,12 +49,49 @@
     --box-shadow: 0px 3px 0px #342C33;
 }
 
-body {
+main {
+    position: relative;
+    margin-top: 4.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 var(--medium-size);
-    gap: var(--larger-size);
+    gap: var(--largest-size);
+}
+
+header > *, footer > * {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+header nav,
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: var(--default-width);
+    max-width: var(--max-width);
+    padding: .6rem 0;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: end;
+    gap: .5rem;
 }
 
 h1,
@@ -125,7 +164,7 @@ button {
 
 #bio {
     display: grid;
-    gap: var(--larger-size);
+    gap: var(--large-size);
     column-gap: 4.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -136,9 +175,10 @@ button {
 #bio .image {
     position: relative;
     height: fit-content;
-    width: 100%;
-    aspect-ratio: 3/4;
-    margin-top: 15%;
+    width: 90%;
+    /* height: 35rem; */
+    aspect-ratio: 3.5/5;
+    margin: 13% auto 0 auto;
 }
 
 #bio .image img {
@@ -147,7 +187,6 @@ button {
     height: 100%;
     object-fit: cover;
     border-radius: var(--medium-radius);
-
 }
 
 #bio .image .buttons {
@@ -157,7 +196,7 @@ button {
     flex-wrap: wrap;
 }
 
-#bio .image .buttons > * {
+#bio .image .buttons>* {
     position: absolute;
     height: fit-content;
 }
@@ -182,11 +221,13 @@ button {
 
 .profile .profile-pic {
     position: relative;
+    height: 5rem;
+    aspect-ratio: 1/1;
 }
 
 .profile .profile-pic p {
     position: absolute;
-    left: -2.5rem;
+    left: -2rem;
     bottom: -.5rem;
     font-size: 3rem;
     transform-origin: bottom;
@@ -194,6 +235,9 @@ button {
 }
 
 .photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -203,7 +247,7 @@ button {
 
 .headline {
     font-size: var(--larger-size);
-    width: 15rem;
+    width: min-content;
 }
 
 #welcome .headline {
@@ -211,8 +255,8 @@ button {
 }
 
 #tech-stack .headline {
-    width: 12rem;
     grid-row: 1 / 2;
+    margin: 0;
 }
 
 .short-bio {
@@ -276,7 +320,7 @@ button {
     pointer-events: none;
 }
 
-.project .data > * {
+.project .data>* {
     padding: .7rem 1rem;
     background-color: white;
     color: var(--c-default-text);
@@ -357,6 +401,7 @@ button {
 
 #tech-stack p {
     grid-row: 3 / 4;
+    margin: 0;
 }
 
 #projects .project {
@@ -388,36 +433,37 @@ button {
 }
 
 #bio .buttons .primary {
+    position: absolute;
     width: max-content;
 }
 
 #bio .buttons .primary.html {
-    top: -4%;
-    left: 12%;
+    top: -1rem;
+    left: 1.8rem;
 }
 
 #bio .buttons .primary.javascript {
-    top: 30%;
-    left: 75%;
+    top: 22%;
+    right: -3%;
 }
 
 #bio .buttons .primary.webgl {
-    top: 40%;
-    left: -4%;
+    top: 50%;
+    left: -6%;
 }
 
 #bio .buttons .primary.resume {
-    margin: 114% auto;
+    margin: 120% auto;
     position: static;
 }
 
 
 
-@keyframes open {
+/* @keyframes open {
     from {}
 }
 
-/* .open {
+.open {
     display: block;
     animation: fill 1s forwards;
 }
@@ -428,7 +474,7 @@ button {
 
 .closed {
     clip-path: circle(0rem at inherit inherit);
-} */
+}
 
 @keyframes fill-reverse {
     from {
@@ -448,7 +494,7 @@ button {
     to {
         clip-path: circle(100%);
     }
-}
+} */
 
 @keyframes point {
     from {
@@ -475,7 +521,11 @@ button {
     }
 }
 
-@media only screen and (min-width: 775px) {
+@media only screen and (min-width: 800px) {
+    main {
+        margin-top: var(--largest-size);
+    }
+
     #welcome {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 4vw;
@@ -525,6 +575,7 @@ button {
         grid-column: 2 / 4;
         grid-row: 15 / 16;
         height: fit-content;
+        margin-top: auto;
     }
 
     hr {
@@ -550,6 +601,7 @@ button {
     #tech-stack .headline {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        margin: 0 auto;
     }
 
     #tech-stack #tools {
@@ -563,8 +615,9 @@ button {
     }
 
     #tech-stack p {
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         grid-column: 1 / 2;
+        margin: 10rem auto 0 auto;
     }
 
     .short-bio {
@@ -581,7 +634,7 @@ button {
     }
 
     #bio {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 34% 1fr;
     }
 
     #bio .headline {
@@ -594,5 +647,25 @@ button {
 
     #bio .education {
         grid-column: 2 / 3;
+    }
+
+    #bio .buttons .primary.html {
+        top: -1rem;
+        left: 1.8rem;
+    }
+
+    #bio .buttons .primary.javascript {
+        top: 22%;
+        right: -2rem;
+    }
+
+    #bio .buttons .primary.webgl {
+        top: 50%;
+        left: -1.5rem;
+    }
+
+    #bio .buttons .primary.resume {
+        margin: 121% auto;
+        position: static;
     }
 }

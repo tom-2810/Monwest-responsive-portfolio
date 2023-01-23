@@ -18,7 +18,7 @@ featuredContainer.addEventListener("click", () => {
         if(featuredFullscreen.classList.contains("open")) {
             featuredFullscreen.style.transform = null;
         } else {
-            featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(${-1*featuredContainerY - 1}px)`;
+            featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(${-1*featuredContainerY}px)`;
             console.log(featuredContainerY)
         }
     }
@@ -26,12 +26,12 @@ featuredContainer.addEventListener("click", () => {
     if(featuredFullscreen.classList.contains("open")) {
         featuredFullscreen.style.transform = null;
     } else {
-        featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(-${featuredContainerY + 1}px)`;
+        featuredFullscreen.style.transform = `translateX(-${featuredContainerX}px) translateY(-${featuredContainerY}px)`;
     }
 
         
     
-    featuredFullscreen.style.transition = "1s";
+    featuredFullscreen.style.transition = ".2s ease";
     featuredFullscreen.classList.toggle("open");
     
 })
