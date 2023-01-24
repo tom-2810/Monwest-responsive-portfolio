@@ -59,7 +59,8 @@ main {
     gap: var(--largest-size);
 }
 
-header > *, footer > * {
+header>*,
+footer>* {
     display: flex;
     align-items: center;
 }
@@ -168,6 +169,15 @@ button {
     column-gap: 4.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    width: var(--default-width);
+    max-width: var(--max-width);
+}
+
+#faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--large-size);
     width: var(--default-width);
     max-width: var(--max-width);
 }
@@ -457,7 +467,63 @@ button {
     position: static;
 }
 
+#faq .headline {
+    max-width: 22rem;
+    width: 100%;
+    font-size: 2.8rem;
+}
 
+#faq .accordion {
+    width: 100%;
+}
+
+#faq .accordion summary::marker {
+    display: none;
+    content: '';
+}
+
+#faq .accordion summary::after {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: .5rem;
+    width: .5rem;
+    padding: .5rem;
+    margin-left: var(--medium-size);
+    content: '+';
+    border: 2px solid var(--c-default-text);
+    border-radius: 8px;
+}
+
+#faq .accordion details {
+    transition: 150ms;
+}
+
+#faq .accordion details[open] summary::after {
+    content: '-';
+}
+
+#faq .accordion details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--medium-size);
+    padding: var(--medium-size) 0;
+    border-bottom: 2px solid var(--c-default-text);
+    opacity: .5;
+    cursor: pointer;
+}
+
+#faq .accordion details[open] summary {
+    border-bottom: none;
+    opacity: 1;
+}
+
+#faq .accordion details[open] {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--c-default-text);
+    opacity: 1;
+}
 
 /* @keyframes open {
     from {}
@@ -667,5 +733,13 @@ button {
     #bio .buttons .primary.resume {
         margin: 121% auto;
         position: static;
+    }
+
+    #faq {
+        flex-direction: row;
+    }
+
+    #faq .accordion {
+        max-width: 35rem;
     }
 }
