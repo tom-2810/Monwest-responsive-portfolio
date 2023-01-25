@@ -215,7 +215,17 @@ button {
     gap: var(--larger-size);
     overflow-y: auto;
     width: 100vw;
-    padding: 1rem;
+    padding: 4rem 0;
+}
+
+#papers .slider::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+}
+
+#papers .slider::-webkit-scrollbar-thumb {
+    background-color: rgb(234, 234, 234);
+    border-radius: 5rem;
 }
 
 #papers .article-card {
@@ -223,15 +233,22 @@ button {
     flex-direction: column;
     justify-content: space-between;
     padding: var(--medium-size);
+    height: 21rem;
     aspect-ratio: 4/5;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+#papers .article-card:hover {
+    transform: translateY(-2rem);
 }
 
 #papers .article-card:first-child {
-    margin-left: 22vw;
+    margin-left: 30vw;
 }
 
 #papers .article-card:last-child {
-    margin-right: 22vw;
+    margin-right: 24vw;
 }
 
 #papers .article-card h3 {
@@ -259,8 +276,9 @@ button {
 
 #papers #large-pencil {
     height: 16rem;
-    top: 40%;
+    top: 35%;
     left: -12%;
+    z-index: 1;
 }
 
 #bio .image {
@@ -533,16 +551,21 @@ button {
 #bio .buttons .primary.html {
     top: -1rem;
     left: 1.8rem;
+    animation: shift 1s infinite alternate;
 }
 
 #bio .buttons .primary.javascript {
     top: 22%;
     right: -3%;
+    animation: shift 1.5s infinite alternate;
+    animation-play-state: -2s;
 }
 
 #bio .buttons .primary.webgl {
     top: 50%;
     left: -6%;
+    animation: shift 1.3s infinite alternate;
+    animation-play-state: -2s;
 }
 
 #bio .buttons .primary.resume {
@@ -731,11 +754,20 @@ button {
 
 @keyframes chill {
     from {
-        transform: rotate(-20deg);
+        transform: rotate(-15deg);
     }
 
     to {
-        transform: rotate(20deg);
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes shift {
+    from {
+        transform: translateX(-3px);
+    }
+    to {
+        transform: translateX(3px);
     }
 }
 
