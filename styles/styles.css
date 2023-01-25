@@ -128,8 +128,9 @@ button {
     overflow: hidden;
 }
 
-.emoji {
+.emoji:not(#papers .emoji) {
     height: 3rem;
+    animation: chill 1s infinite alternate;
 }
 
 .accent {
@@ -588,7 +589,6 @@ button {
 #faq .accordion details summary {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: var(--medium-size);
     padding: var(--medium-size) 0;
     border-bottom: 2px solid var(--c-default-text);
