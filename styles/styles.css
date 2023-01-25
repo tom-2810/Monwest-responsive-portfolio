@@ -128,6 +128,10 @@ button {
     overflow: hidden;
 }
 
+.emoji {
+    height: 3rem;
+}
+
 .accent {
     font-family: Manrope Regular;
     background: var(--c-text-gradient);
@@ -184,6 +188,7 @@ button {
 }
 
 #papers {
+    position: relative;
     display: grid;
     gap: var(--large-size);
     column-gap: 4.5rem;
@@ -236,6 +241,25 @@ button {
 
 #papers .article-card .secondary {
     margin-left: auto;
+}
+
+#papers .emoji {
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: -1;
+}
+
+#papers #small-pencil {
+    height: 10rem;
+    top: 12%;
+    left: -9%;
+    transform: rotate(223deg);
+}
+
+#papers #large-pencil {
+    height: 16rem;
+    top: 40%;
+    left: -12%;
 }
 
 #bio .image {
@@ -583,7 +607,90 @@ button {
     opacity: 1;
 }
 
+#contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--larger-size);
+    width: var(--default-width);
+    max-width: var(--max-width);
+}
 
+#contact #hire {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--large-size);
+    height: 30rem;
+}
+
+#contact .headline {
+    font-size: 2.5rem;
+}
+
+#contact #hire .headline {
+    width: max-content;
+}
+
+#contact .headline h2 {
+    width: 20rem;
+}
+
+#contact .resume {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium-size);
+}
+
+#contact .resume .headline {
+    font-size: var(--larger-size);
+}
+
+#contact .resume .buttons {
+    display: flex;
+    align-items: center;
+}
+
+#contact #hire .emoji {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contact #hire .emoji#phone {
+    top: 3%;
+    left: 25%;
+    animation: chill 1s infinite alternate;
+}
+
+#contact #hire .emoji#laptop {
+    top: 10%;
+    left: 80%;
+    animation: chill 1.4s infinite alternate;
+}
+
+#contact #hire .emoji#message {
+    top: 65%;
+    left: 80%;
+    animation: chill 1.1s infinite alternate;
+}
+
+#contact #hire .emoji#shaka {
+    top: 40%;
+    left: -3%;
+    animation: chill 2s infinite alternate;
+    transform-origin: left;
+
+}
+
+#contact #hire .emoji#wave {
+    top: 80%;
+    left: 30%;
+    animation: chill .8s infinite alternate;
+    transform-origin: bottom;
+}
 
 /* @keyframes open {
     from {}
@@ -621,6 +728,16 @@ button {
         clip-path: circle(100%);
     }
 } */
+
+@keyframes chill {
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
 
 @keyframes point {
     from {
@@ -812,5 +929,41 @@ button {
     #papers .slider {
         grid-column: 1 / 4;
         grid-row: 2 / 3;
+    }
+
+    #papers #small-pencil {
+        height: 11rem;
+        top: 15%;
+        left: 10%;
+        transform: rotate(223deg);
+    }
+
+    #papers #large-pencil {
+        height: 32rem;
+        top: 5%;
+        left: -10%;
+    }
+
+    #contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--larger-size);
+        width: var(--default-width);
+        max-width: var(--max-width);
+    }
+
+    #contact #hire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #contact .headline {
+        font-size: 2.5rem;
+    }
+
+    #contact .headline h2 {
+        width: 20rem;
     }
 }
