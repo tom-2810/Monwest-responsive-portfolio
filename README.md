@@ -11,7 +11,7 @@
 ### Desktop
 
 ![Schermafbeelding_20230126_124807](https://user-images.githubusercontent.com/112861614/214828306-4f63d134-b0aa-4a96-a984-d42bf6c84219.png)
-![Schermafbeelding_20230126_124822](https://user-images.githubusercontent.com/112861614/214828322-85ddfcd3-d95c-450c-9a60-49ffe26e76f3.png)
+![Schermafbeelding_20230126_130019](https://user-images.githubusercontent.com/112861614/214830277-41490192-98fa-4add-bdf6-4881cf3de6d6.png)
 
 <!-- ## 📚inhoudsopgave
 - [Opdrachtgever](https://github.com/tom-2810/the-startup-responsive-interactieve-website#opdrachtgever)
