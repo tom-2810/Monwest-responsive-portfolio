@@ -1,14 +1,14 @@
 # Portfolio one-pager
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
-## 📸screenshot van de website
+## 📸 Screenshots van de website
 
-### Mobile
+### 📱 Mobile
 
 ![Schermafbeelding_20230126_124841](https://user-images.githubusercontent.com/112861614/214828288-f8fae980-b518-42bb-a221-5367629b48c0.png)
 ![Schermafbeelding_20230126_124853](https://user-images.githubusercontent.com/112861614/214828293-f09b2d91-cc23-407f-9c4e-a7a370a59a03.png)
 
-### Desktop
+### 💻 Desktop
 
 ![Schermafbeelding_20230126_124807](https://user-images.githubusercontent.com/112861614/214828306-4f63d134-b0aa-4a96-a984-d42bf6c84219.png)
 ![Schermafbeelding_20230126_130019](https://user-images.githubusercontent.com/112861614/214830277-41490192-98fa-4add-bdf6-4881cf3de6d6.png)
@@ -20,19 +20,19 @@
 - [Checklist](https://github.com/tom-2810/the-startup-responsive-interactieve-website#checklist)
 - [Kenmerken](https://github.com/tom-2810/the-startup-responsive-interactieve-website#kenmerken) -->
 
-## 💼opdrachtgever
+## 💼 Opdrachtgever
 Deze website is in opdracht van Monwest gegeven. 
 "A dedicated multi-disciplinary team focused on building meaningful and aesthetically pleasing digital experiences."
 https://www.monwest.nl/
 
-## 🚀design challenge
+## 🚀 Design challenge
 Creëer een responsive one-pager op basis van het aangeleverde design met HTML, CSS en Javascript.
 Daarnaast heeft Monwest aangegeven dat ze het belangrijk vinden dat ik mezelf uitdaag.
 Zo mocht ik het ontwerp aanpassen met andere content, interacties en animaties.
 
 De website is aan de hand van mobile first ontwikkeld.
 
-## 👩💻gebruik van de website 📱💻
+## 📱💻 Gebruik van de website
 Zoals hierboven staat beschreven is de website een one-pager. Dit betekent dat de gebruiker niet hoeft te navigeren tussen meerdere pagina's, en maakt dus het gebruik een stuk eenvoudiger.
 
 De gebruiker wordt bij een bezoek aan de website verwelkomt door een zero-state design, dat uitnodigt tot interactie (scrollen en/of klikken op een action button). Daarnaast is het mogelijk om op het eerste project te klikken om het volledige scherm te vullen.
