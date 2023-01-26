@@ -597,6 +597,7 @@ button {
     position: relative;
     width: 100%;
     aspect-ratio: 5/4;
+    cursor: pointer;
 }
 
 .project-container .project {
@@ -609,31 +610,48 @@ button {
     transition: 1s;
 }
 
+.project-container:hover .project .data .project-tools {
+    visibility: visible;
+}
+
 .data {
     position: absolute;
     display: flex;
+    flex-direction: column;
     gap: .5rem;
     width: 100%;
+    height: 100%;
     justify-content: space-between;
     padding: var(--medium-size);
     z-index: 1;
-}
-
-.data .link {
-    margin-left: auto;
 }
 
 .project .data {
     pointer-events: none;
 }
 
-.project .data>* {
+.project .data .project-data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.project .data .project-tools {
+    display: flex;
+    gap: 1rem;
+    width: 60%;
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+
+.project .data>*>* {
     padding: .7rem 1rem;
     background-color: white;
     color: var(--c-default-text);
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: var(--small-radius);
+    width: fit-content;
 }
 
 /* button and data block styling */
