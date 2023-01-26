@@ -30,6 +30,8 @@ Creëer een responsive one-pager op basis van het aangeleverde design met HTML, 
 Daarnaast heeft Monwest aangegeven dat ze het belangrijk vinden dat ik mezelf uitdaag.
 Zo mocht ik het ontwerp aanpassen met andere content, interacties en animaties.
 
+De website is aan de hand van mobile first ontwikkeld.
+
 ## 👩💻gebruik van de website 📱💻
 Zoals hierboven staat beschreven is de website een one-pager. Dit betekent dat de gebruiker niet hoeft te navigeren tussen meerdere pagina's, en maakt dus het gebruik een stuk eenvoudiger.
 
