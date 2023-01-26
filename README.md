@@ -7,8 +7,13 @@
 
 ### Mobile
 
+![Schermafbeelding_20230126_124841](https://user-images.githubusercontent.com/112861614/214828288-f8fae980-b518-42bb-a221-5367629b48c0.png)
+![Schermafbeelding_20230126_124853](https://user-images.githubusercontent.com/112861614/214828293-f09b2d91-cc23-407f-9c4e-a7a370a59a03.png)
+
 ### Desktop
 
+![Schermafbeelding_20230126_124807](https://user-images.githubusercontent.com/112861614/214828306-4f63d134-b0aa-4a96-a984-d42bf6c84219.png)
+![Schermafbeelding_20230126_124822](https://user-images.githubusercontent.com/112861614/214828322-85ddfcd3-d95c-450c-9a60-49ffe26e76f3.png)
 
 ## 📚inhoudsopgave
 Opdrachtgever
