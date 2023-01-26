@@ -1,7 +1,52 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
+# Portfolio one-pager
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+
+## 📸screenshot van de website
+
+### Mobile
+
+### Desktop
+
+
+## 📚inhoudsopgave
+Opdrachtgever
+Design Challenge
+Gebruik van de website
+Checklist
+Kenmerken
+
+## 💼opdrachtgever
+Deze website is in opdracht van Monwest gegeven. 
+"A dedicated multi-disciplinary team focused on building meaningful and aesthetically pleasing digital experiences."
+https://www.monwest.nl/
+
+## 🚀design challenge
+Creëer een responsive one-pager op basis van het aangeleverde design met HTML, CSS en Javascript.
+Daarnaast heeft Monwest aangegeven dat ze het belangrijk vinden dat ik mezelf uitdaag.
+Zo mocht ik het ontwerp aanpassen met andere content, interacties en animaties.
+
+## 👩💻gebruik van de website 📱💻
+Zoals hierboven staat beschreven is de website een one-pager. Dit betekent dat de gebruiker niet hoeft te navigeren tussen meerdere pagina's, en maakt dus het gebruik een stuk eenvoudiger.
+
+De gebruiker wordt bij een bezoek aan de website verwelkomt door een zero-state design, dat uitnodigt tot interactie (scrollen en/of klikken op een action button). Daarnaast is het mogelijk om op het eerste project te klikken om het volledige scherm te vullen.
+
+De website is in verschillende sections opgedeeld. 
+- Het begint met een welcome section waar beknopte informatie staat over de portfolio eigenaar. 
+- Alle projecten worden getoond in een collage. Door over een project te hoveren verschijnt er meer informatie over dit project. Dit laat zien welke tools gebruikt zijn om het project te verwezenlijken.
+- Daaronder komt de Tech Stack. Dit vat samen met wat voor tools de portfolio eigenaar bekent is. En welke als favoriete tools beschouwd worden.
+- De bio section toont een grotere profiel foto met daarin blokjes met web tools. Ook staat er meer informatie, zoals een volledige biography en educatie niveau rondom de foto.
+- Om algemene vragen alvast te kunnen beantwoorden is er een FAQ section. Deze bevat een paar details elementen, waarin vraag en antwoord staat.
+- Als een-na-laatste section is er een papers section. Deze fungeert als aanbevelings lijst voor articles en papers. Door horizontaal te scrollen bladert de gebruiker door deze articles.
+- De laatste section rond de one-pager af. Hierin kan de gebruiker contact op nemen met de portfolio eigenaar en de resume downloaden.
+
+De website is responsive en toont dezelfde content op zowel desktop als mobile.
+Hiervoor word de mobile versie (1 column layout) naar de desktop versie omgezet, naarmate het scherm breder is.
+
+## 🚧checklist wel gelukt / niet gelukt
+
+
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
