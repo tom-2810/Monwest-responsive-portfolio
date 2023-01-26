@@ -16,11 +16,11 @@
 ![Schermafbeelding_20230126_124822](https://user-images.githubusercontent.com/112861614/214828322-85ddfcd3-d95c-450c-9a60-49ffe26e76f3.png)
 
 ## 📚inhoudsopgave
-Opdrachtgever
-Design Challenge
-Gebruik van de website
-Checklist
-Kenmerken
+- [Opdrachtgever](https://github.com/tom-2810/the-startup-responsive-interactieve-website#opdrachtgever)
+- [Design Challenge](https://github.com/tom-2810/the-startup-responsive-interactieve-website#design-challenge)
+- [Gebruik van de website](https://github.com/tom-2810/the-startup-responsive-interactieve-website#gebruik-van-de-website)
+- [Checklist](https://github.com/tom-2810/the-startup-responsive-interactieve-website#checklist)
+- [Kenmerken](https://github.com/tom-2810/the-startup-responsive-interactieve-website#kenmerken)
 
 ## 💼opdrachtgever
 Deze website is in opdracht van Monwest gegeven. 
