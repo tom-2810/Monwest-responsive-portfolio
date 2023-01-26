@@ -40,11 +40,11 @@ De gebruiker wordt bij een bezoek aan de website verwelkomt door een zero-state 
 De website is in verschillende sections opgedeeld. 
 - Het begint met een welcome section waar beknopte informatie staat over de portfolio eigenaar. 
 - Alle projecten worden getoond in een collage. Door over een project te hoveren verschijnt er meer informatie over dit project. Dit laat zien welke tools gebruikt zijn om het project te verwezenlijken.
-- Daaronder komt de Tech Stack. Dit vat samen met wat voor tools de portfolio eigenaar bekent is. En welke als favoriete tools beschouwd worden.
+- Daaronder komt de Tech Stack. Dit vat samen met wat voor tools de portfolio eigenaar bekend is. En welke als favoriete tools beschouwd worden.
 - De bio section toont een grotere profiel foto met daarin blokjes met web tools. Ook staat er meer informatie, zoals een volledige biography en educatie niveau rondom de foto.
-- Om algemene vragen alvast te kunnen beantwoorden is er een FAQ section. Deze bevat een paar details elementen, waarin vraag en antwoord staat.
+- Om algemene vragen alvast te kunnen beantwoorden is er een FAQ section. Deze bevat een paar details elementen, waarin vraag en antwoord staan.
 - Als een-na-laatste section is er een papers section. Deze fungeert als aanbevelings lijst voor articles en papers. Door horizontaal te scrollen bladert de gebruiker door deze articles.
-- De laatste section rond de one-pager af. Hierin kan de gebruiker contact op nemen met de portfolio eigenaar en de resume downloaden.
+- De laatste section rondt de one-pager af. Hierin kan de gebruiker contact opnemen met de portfolio eigenaar en de resume downloaden.
 
 De website is responsive en toont dezelfde content op zowel desktop als mobile.
 Hiervoor word de mobile versie (1 column layout) naar de desktop versie omgezet, naarmate het scherm breder is.
