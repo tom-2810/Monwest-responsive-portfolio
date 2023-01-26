@@ -140,6 +140,17 @@ button {
     text-fill-color: transparent;
 }
 
+.buttons .primary {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: .5rem;
+}
+
+.buttons img {
+    padding: 0;
+}
+
 /* page sections */
 
 #welcome {
@@ -239,6 +250,12 @@ button {
     padding: 0;
 }
 
+.me ul li {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
 .profile {
     display: flex;
     align-items: center;
@@ -278,7 +295,7 @@ button {
     overflow: hidden;
 }
 
-#projects .project img {
+#projects .project > img {
     position: absolute;
     height: 100%;
 }
@@ -299,6 +316,10 @@ button {
 
 #tech-stack .buttons * {
     height: fit-content;
+}
+
+#tech-stack .buttons img {
+    padding: 0;
 }
 
 #tech-stack p {
@@ -636,10 +657,15 @@ button {
     justify-content: space-between;
 }
 
+.project .data .project-data .view-count {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
 .project .data .project-tools {
     display: flex;
-    gap: 1rem;
-    width: 60%;
+    gap: .5rem;
     flex-wrap: wrap;
     visibility: hidden;
 }
